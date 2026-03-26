@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campamento de Pascua Kidiverso 2026 | Inscripción</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --purple:      #341c77;
+  --purple-mid:  #5b3fa0;
+  --purple-light:#8b6ec7;
+  --purple-pale: #f0ebff;
+  --cyan:        #6EC1E4;
+  --cyan-light:  #c2e8f7;
+  --green:       #61CE70;
+  --green-light: #d4f5d8;
+  --orange:      #FFBC7D;
+  --orange-dark: #f97316;
+  --pink:        #e91e8c;
+  --pink-light:  #F1BDED;
+  --white:       #ffffff;
+  --gray-bg:     #f7f5ff;
+  --gray-text:   #5a5270;
+  --gray-light:  #e8e4f4;
+  --dark:        #1e1135;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--white);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  background: var(--purple);
+  color: white;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+.topbar a { color: var(--orange); text-decoration: none; }
+
+/* ===== HEADER ===== */
+.header {
+  background: white;
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(52,28,119,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.header-logo img { height: 52px; width: auto; }
+.header-cta {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: var(--pink);
+  color: white;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(233,30,140,0.3);
+}
+.header-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(233,30,140,0.4); }
+@media (max-width: 480px) {
+  .header { padding: 0.7rem 1rem; }
+  .header-logo img { height: 40px; }
+  .header-cta { font-size: 0.85rem; padding: 0.5rem 1rem; }
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, var(--purple) 0%, #5b2d8e 50%, #e91e8c 100%);
+  padding: 3.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -80px;
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(110,193,228,0.25) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; left: -60px;
+  width: 250px; height: 250px;
+  background: radial-gradient(circle, rgba(255,188,125,0.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.2rem;
+  backdrop-filter: blur(8px);
+}
+.hero h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  font-weight: 700;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+.hero h1 span { color: var(--orange); }
+.hero-sub {
+  color: rgba(255,255,255,0.88);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+.hero-dates {
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+.hero-date-chip {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  backdrop-filter: blur(6px);
+}
+.hero-btns {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--purple);
+  background: white;
+  border-radius: 60px;
+  text-decoration: none;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+  transition: all 0.25s ease;
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 35px rgba(0,0,0,0.2); }
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  background: #25D366;
+  border-radius: 60px;
+  text-decoration: none;
+  box-shadow: 0 6px 25px rgba(37,211,102,0.35);
+  transition: all 0.25s ease;
+}
+.btn-wa:hover { transform: translateY(-3px); }
+.btn-wa svg { width: 20px; height: 20px; fill: white; }
+
+/* ===== COUNTDOWN ===== */
+.countdown-section {
+  background: var(--gray-bg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid var(--gray-light);
+}
+.countdown-label {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--purple-mid);
+  margin-bottom: 1rem;
+}
+.countdown-boxes {
+  display: inline-flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.countdown-box {
+  background: white;
+  border: 2px solid var(--purple-pale);
+  border-radius: 16px;
+  padding: 0.8rem 1.2rem;
+  min-width: 72px;
+  box-shadow: 0 4px 16px rgba(52,28,119,0.06);
+}
+.countdown-num {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--purple);
+  line-height: 1;
+}
+.countdown-unit {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray-text);
+  margin-top: 0.2rem;
+}
+.countdown-ended {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.4rem;
+  color: var(--pink);
+  font-weight: 700;
+}
+
+/* ===== SECTIONS BASE ===== */
+section { padding: 4rem 1.5rem; }
+.section-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  text-align: center;
+  color: var(--purple);
+  margin-bottom: 0.4rem;
+}
+.section-subtitle {
+  text-align: center;
+  color: var(--gray-text);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+/* ===== ACTIVITIES ===== */
+.activities-section { background: white; }
+.activities-grid {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.2rem;
+}
+.activity-card {
+  background: var(--gray-bg);
+  border: 2px solid var(--purple-pale);
+  border-radius: 20px;
+  padding: 1.6rem 1.2rem;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+.activity-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cyan);
+  box-shadow: 0 8px 28px rgba(110,193,228,0.2);
+}
+.activity-card:nth-child(1) { border-top: 4px solid var(--orange); }
+.activity-card:nth-child(2) { border-top: 4px solid var(--pink); }
+.activity-card:nth-child(3) { border-top: 4px solid var(--cyan); }
+.activity-card:nth-child(4) { border-top: 4px solid var(--green); }
+.activity-icon { font-size: 2.6rem; margin-bottom: 0.7rem; display: block; }
+.activity-card h3 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.05rem;
+  color: var(--purple);
+  margin-bottom: 0.3rem;
+}
+.activity-card p { font-size: 0.88rem; color: var(--gray-text); line-height: 1.5; }
+
+/* ===== SCHEDULE STRIP ===== */
+.schedule-strip {
+  background: var(--purple);
+  padding: 1.8rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.schedule-item {
+  text-align: center;
+  color: white;
+}
+.schedule-item .s-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 0.3rem;
+}
+.schedule-item .s-val {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ===== PRICING ===== */
+.pricing-section { background: var(--gray-bg); }
+.pricing-grid {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.4rem;
+}
+.price-card {
+  background: white;
+  border: 2px solid var(--gray-light);
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 12px rgba(52,28,119,0.05);
+}
+.price-card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(52,28,119,0.1); }
+.price-card.featured {
+  border-color: var(--purple);
+  background: linear-gradient(160deg, var(--purple-pale) 0%, white 100%);
+}
+.price-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--purple);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.25rem 0.9rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+.price-icon { font-size: 2.2rem; margin-bottom: 0.6rem; }
+.price-card h3 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.2rem;
+  color: var(--purple);
+  margin-bottom: 0.3rem;
+}
+.price-amount {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--purple);
+  line-height: 1;
+  margin: 0.5rem 0;
+}
+.price-amount .peso { font-size: 1.8rem; }
+.price-desc { font-size: 0.88rem; color: var(--gray-text); line-height: 1.5; }
+.price-ext {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--gray-light);
+  font-size: 0.82rem;
+  color: var(--gray-text);
+}
+.price-ext strong { color: var(--pink); font-family: 'Fredoka', sans-serif; font-size: 1rem; }
+
+/* ===== FAQ ===== */
+.faq-section { background: white; }
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.faq-item {
+  border: 2px solid var(--gray-light);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.faq-item.open { border-color: var(--cyan); }
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.1rem 1.4rem;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--purple);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.faq-q .faq-arrow {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  background: var(--purple-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  transition: transform 0.25s ease;
+}
+.faq-item.open .faq-arrow { transform: rotate(180deg); background: var(--cyan-light); }
+.faq-a {
+  display: none;
+  padding: 0 1.4rem 1.1rem;
+  font-size: 0.92rem;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ===== FORM SECTION ===== */
+.form-section { background: var(--gray-bg); }
+.form-container {
+  max-width: 680px;
+  margin: 0 auto;
+  background: white;
+  border: 2px solid var(--gray-light);
+  border-radius: 28px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 40px rgba(52,28,119,0.07);
+}
+
+/* Progress bar */
+.form-progress {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+.form-step-dot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  flex: 1;
+  position: relative;
+}
+.form-step-dot:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background: var(--gray-light);
+  z-index: 0;
+}
+.form-step-dot.completed:not(:last-child)::after { background: var(--green); }
+.step-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--gray-text);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.form-step-dot.active .step-circle { background: var(--purple); color: white; box-shadow: 0 0 0 4px rgba(52,28,119,0.15); }
+.form-step-dot.completed .step-circle { background: var(--green); color: white; }
+.step-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gray-text);
+  text-align: center;
+}
+.form-step-dot.active .step-label { color: var(--purple); }
+.form-step-dot.completed .step-label { color: var(--green); }
+
+/* Step panels */
+.form-panel { display: none; }
+.form-panel.active { display: block; }
+
+.form-group-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--purple);
+  margin-bottom: 1rem;
+  margin-top: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form-group-title:first-child { margin-top: 0; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.form-field { display: flex; flex-direction: column; }
+.form-field.full { grid-column: 1 / -1; }
+
+.form-field label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--gray-text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.35rem;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--gray-light);
+  border-radius: 12px;
+  background: var(--gray-bg);
+  color: var(--dark);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--purple-mid);
+  box-shadow: 0 0 0 3px rgba(91,63,160,0.1);
+  background: white;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: #b0a8c8; }
+.form-field select option { background: white; color: var(--dark); }
+.form-field textarea { resize: vertical; min-height: 70px; }
+
+.checkbox-group { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 0.5rem; }
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--gray-text);
+}
+.checkbox-item input[type="checkbox"] {
+  width: 20px; height: 20px; min-width: 20px;
+  border-radius: 6px;
+  border: 2px solid var(--gray-light);
+  background: var(--gray-bg);
+  appearance: none; -webkit-appearance: none;
+  cursor: pointer;
+  position: relative;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+}
+.checkbox-item input[type="checkbox"]:checked { background: var(--purple); border-color: var(--purple); }
+.checkbox-item input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+/* Nav buttons */
+.form-nav {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+.btn-back {
+  padding: 0.85rem 1.8rem;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-text);
+  background: var(--gray-bg);
+  border: 2px solid var(--gray-light);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-back:hover { border-color: var(--purple-light); color: var(--purple); }
+.btn-next, .submit-btn {
+  flex: 1;
+  padding: 0.9rem 1.8rem;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, var(--purple) 0%, #5b2d8e 100%);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(52,28,119,0.3);
+  transition: all 0.2s ease;
+}
+.btn-next:hover, .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(52,28,119,0.35); }
+.submit-btn { background: linear-gradient(135deg, var(--pink) 0%, #c9007a 100%); box-shadow: 0 4px 18px rgba(233,30,140,0.3); }
+.form-note {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 0.8rem;
+  color: #9e93bb;
+  line-height: 1.5;
+}
+
+/* ===== CONTACT ===== */
+.contact-section {
+  background: var(--purple);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+}
+.contact-section .section-title { color: white; }
+.contact-section .section-subtitle { color: rgba(255,255,255,0.65); }
+.contact-grid {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.contact-card {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 18px;
+  padding: 1.2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 140px;
+  backdrop-filter: blur(6px);
+  transition: all 0.2s ease;
+}
+.contact-card:hover { background: rgba(255,255,255,0.18); transform: translateY(-3px); }
+.contact-card .ci { font-size: 1.8rem; margin-bottom: 0.2rem; }
+.contact-card strong { font-family: 'Fredoka', sans-serif; color: var(--orange); font-size: 0.9rem; }
+.contact-card a, .contact-card span { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.contact-card a:hover { color: white; }
+
+.map-container {
+  max-width: 700px;
+  margin: 2rem auto 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 3px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+.map-container iframe {
+  width: 100%;
+  height: 220px;
+  display: block;
+  border: none;
+  filter: grayscale(20%);
+}
+
+.footer-note {
+  margin-top: 2rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ===== FLOATING WHATSAPP ===== */
+.wa-float {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 100;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+  text-decoration: none;
+  animation: wa-pulse 2.5s ease-in-out infinite;
+  transition: transform 0.2s ease;
+}
+.wa-float:hover { transform: scale(1.1); animation: none; }
+.wa-float svg { width: 30px; height: 30px; fill: white; }
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 6px 20px rgba(37,211,102,0.5); }
+  50% { box-shadow: 0 6px 35px rgba(37,211,102,0.7), 0 0 0 10px rgba(37,211,102,0.1); }
+}
+
+/* ===== SUCCESS ===== */
+.success-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(52,28,119,0.96);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+}
+.success-overlay.active { display: flex; }
+.success-emoji { font-size: 5rem; margin-bottom: 1rem; }
+.success-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2rem;
+  color: var(--orange);
+  margin-bottom: 0.8rem;
+}
+.success-msg { color: rgba(255,255,255,0.75); max-width: 420px; line-height: 1.6; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  section { padding: 2.8rem 1rem; }
+  .hero { padding: 2.5rem 1rem 3rem; }
+  .form-container { padding: 1.8rem 1.2rem; border-radius: 20px; }
+  .form-row { grid-template-columns: 1fr; }
+  .schedule-strip { gap: 1.5rem; padding: 1.4rem 1rem; }
+  .contact-grid { flex-direction: column; align-items: center; }
+  .contact-card { width: 100%; max-width: 280px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  🐣 Campamento de Pascua 2026 · 6 al 10 de abril · <a href="#inscripcion">¡Lugares limitados!</a>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-logo">
+    <a href="#inicio"><img src="logo-kidiverso-sin-fondo.png" alt="Kidiverso"></a>
+  </div>
+  <a href="#inscripcion" class="header-cta">Inscribir ahora</a>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-badge">🐣 Campamento de Pascua 2026</div>
+  <h1>¡Una semana de<br><span>pura diversión!</span></h1>
+  <p class="hero-sub">Actividades creativas, cocina, baile, arte y mucho más en Kidiverso</p>
+  <div class="hero-dates">
+    <span class="hero-date-chip">📅 6 al 10 de abril</span>
+    <span class="hero-date-chip">🕘 9:00 a 13:30 hrs</span>
+    <span class="hero-date-chip">🧒 3 a 12 años</span>
+  </div>
+  <div class="hero-btns">
+    <a href="#inscripcion" class="btn-primary">¡Quiero inscribirme!</a>
+    <a href="https://wa.me/524401864030" target="_blank" class="btn-wa">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<div class="countdown-section">
+  <p class="countdown-label">⏳ Faltan para el campamento</p>
+  <div class="countdown-boxes" id="countdown">
+    <div class="countdown-box"><div class="countdown-num" id="cd-days">--</div><div class="countdown-unit">días</div></div>
+    <div class="countdown-box"><div class="countdown-num" id="cd-hours">--</div><div class="countdown-unit">horas</div></div>
+    <div class="countdown-box"><div class="countdown-num" id="cd-mins">--</div><div class="countdown-unit">minutos</div></div>
+    <div class="countdown-box"><div class="countdown-num" id="cd-secs">--</div><div class="countdown-unit">segundos</div></div>
+  </div>
+</div>
+
+<!-- ACTIVITIES -->
+<section class="activities-section" id="incluye">
+  <h2 class="section-title">¿Qué hacemos en el campamento?</h2>
+  <p class="section-subtitle">Una semana llena de actividades súper divertidas y creativas para niños de 3 a 12 años</p>
+  <div class="activities-grid">
+    <div class="activity-card">
+      <span class="activity-icon">👩‍🍳</span>
+      <h3>Clases de Cocina</h3>
+      <p>Recetas divertidas y deliciosas para los pequeños chefs del campamento</p>
+    </div>
+    <div class="activity-card">
+      <span class="activity-icon">💃</span>
+      <h3>Baile y Música</h3>
+      <p>Coreografías, ritmos y mucha energía para moverse y divertirse cada día</p>
+    </div>
+    <div class="activity-card">
+      <span class="activity-icon">🎨</span>
+      <h3>Artes y Manualidades</h3>
+      <p>Pintura, manualidades y proyectos creativos para dejar volar la imaginación</p>
+    </div>
+    <div class="activity-card">
+      <span class="activity-icon">🏃</span>
+      <h3>Activación Física</h3>
+      <p>Trampolines, laberinto y juegos en nuestras increíbles instalaciones</p>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE STRIP -->
+<div class="schedule-strip">
+  <div class="schedule-item"><div class="s-label">Fechas</div><div class="s-val">6 – 10 de abril</div></div>
+  <div class="schedule-item"><div class="s-label">Días</div><div class="s-val">Lunes a Viernes</div></div>
+  <div class="schedule-item"><div class="s-label">Horario regular</div><div class="s-val">9:00 – 13:30 hrs</div></div>
+  <div class="schedule-item"><div class="s-label">Horario extendido</div><div class="s-val">Hasta 14:30 hrs</div></div>
+  <div class="schedule-item"><div class="s-label">Edades</div><div class="s-val">3 a 12 años</div></div>
+</div>
+
+<!-- PRICING -->
+<section class="pricing-section" id="precios">
+  <h2 class="section-title">Inversión</h2>
+  <p class="section-subtitle">Elige la opción que mejor se adapte a tus planes de Pascua</p>
+  <div class="pricing-grid">
+    <div class="price-card featured">
+      <div class="price-badge">⭐ Más popular</div>
+      <div class="price-icon">📅</div>
+      <h3>Semana completa</h3>
+      <div class="price-amount"><span class="peso">$</span>1,200</div>
+      <p class="price-desc">Lunes a Viernes<br>Horario regular (9:00 – 13:30)</p>
+      <div class="price-ext">+ Horario extendido: <strong>+$250</strong><br><small>hasta 14:30 hrs toda la semana</small></div>
+    </div>
+    <div class="price-card">
+      <div class="price-icon">🗓️</div>
+      <h3>Día suelto</h3>
+      <div class="price-amount"><span class="peso">$</span>250</div>
+      <p class="price-desc">Por día individual<br>Horario regular (9:00 – 13:30)</p>
+      <div class="price-ext">+ Horario extendido: <strong>+$50</strong><br><small>hasta 14:30 hrs ese día</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <h2 class="section-title">Preguntas frecuentes</h2>
+  <p class="section-subtitle">Todo lo que necesitas saber antes de inscribir a tu hijo(a)</p>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q">¿Qué debe traer mi hijo(a) al campamento? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">Ropa cómoda y deportiva, zapatos cerrados, lonchera (si lo desean, aunque hay snacks incluidos), bloqueador solar y buena actitud. En caso de alergia a algún alimento, indicarlo en la ficha de inscripción.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Cómo funciona el horario extendido? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">El horario regular termina a las 13:30 hrs. El horario extendido permite recoger hasta las 14:30 hrs por un costo adicional de $50 por día o $250 por toda la semana. Se selecciona al momento de la inscripción.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Hay lugares limitados? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">Sí, los cupos son limitados para garantizar atención personalizada y la seguridad de todos los niños. Te recomendamos inscribirte lo antes posible para asegurar el lugar de tu hijo(a).</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Puedo inscribir a mi hijo(a) solo por algunos días? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">¡Sí! Puedes elegir días sueltos a $250 por día. Simplemente selecciona el o los días específicos al llenar la ficha de inscripción.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Qué incluye la alimentación? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">El campamento incluye snacks y agua de sabor durante la jornada. Nuestro restaurante Pizza Planeta estará disponible para quienes deseen almorzar con costo adicional.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Cuándo y cómo se formaliza la inscripción? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">Al enviar este formulario reservas el lugar. La inscripción se formaliza con la firma presencial en Kidiverso (Carretera a Guadalajara 1235, Lomas del Tecnológico, SLP). Te contactaremos por WhatsApp para agendar la visita.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Qué pasa si mi hijo(a) tiene alguna alergia o condición médica? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">Es muy importante indicarlo en la ficha de inscripción en la sección de información médica. Nuestro personal estará capacitado para atender cualquier situación. En caso de emergencia, actuaremos de acuerdo a las autorizaciones proporcionadas.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="inscripcion">
+  <h2 class="section-title">Ficha de Pre-Inscripción</h2>
+  <p class="section-subtitle">Completa los 3 pasos para reservar el lugar de tu hijo(a)</p>
+
+  <div class="form-container">
+
+    <!-- Progress -->
+    <div class="form-progress">
+      <div class="form-step-dot active" id="dot-1">
+        <div class="step-circle">1</div>
+        <div class="step-label">Niño(a)</div>
+      </div>
+      <div class="form-step-dot" id="dot-2">
+        <div class="step-circle">2</div>
+        <div class="step-label">Familia</div>
+      </div>
+      <div class="form-step-dot" id="dot-3">
+        <div class="step-circle">3</div>
+        <div class="step-label">Campamento</div>
+      </div>
+    </div>
+
+    <form id="registrationForm" onsubmit="handleSubmit(event)">
+
+      <!-- STEP 1: CHILD -->
+      <div class="form-panel active" id="panel-1">
+        <div class="form-group-title"><span>👧</span> Datos del niño(a)</div>
+        <div class="form-row">
+          <div class="form-field full">
+            <label>Nombre completo</label>
+            <input type="text" name="nombre_nino" placeholder="Nombre y apellidos" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Fecha de nacimiento</label>
+            <input type="date" name="fecha_nacimiento" required>
+          </div>
+          <div class="form-field">
+            <label>Edad</label>
+            <input type="number" name="edad" min="3" max="12" placeholder="3 – 12" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Escuela y grado</label>
+            <input type="text" name="escuela" placeholder="Ej. Colegio del Valle, 3° primaria">
+          </div>
+          <div class="form-field">
+            <label>Género</label>
+            <select name="genero">
+              <option value="" disabled selected>Seleccionar</option>
+              <option>Niño</option>
+              <option>Niña</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Talla de playera</label>
+            <select name="talla" required>
+              <option value="" disabled selected>Seleccionar</option>
+              <option>4 años</option>
+              <option>6 años</option>
+              <option>8 años</option>
+              <option>10 años</option>
+              <option>12 años</option>
+              <option>14 años</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Tipo de sangre</label>
+            <select name="tipo_sangre">
+              <option value="" disabled selected>Seleccionar</option>
+              <option>O+</option><option>O-</option>
+              <option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option>
+              <option>AB+</option><option>AB-</option>
+              <option>No sé</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group-title"><span>🏥</span> Información médica</div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Alergias</label>
+            <input type="text" name="alergias" placeholder="Alimentos, medicamentos, picaduras...">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field full">
+            <label>Condiciones médicas o medicamentos</label>
+            <textarea name="condiciones_medicas" placeholder="Asma, TDAH, diabetes, medicamentos que toma..."></textarea>
+          </div>
+        </div>
+
+        <div class="form-nav">
+          <button type="button" class="btn-next" onclick="nextStep(1)">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: FAMILY -->
+      <div class="form-panel" id="panel-2">
+        <div class="form-group-title"><span>👨‍👩‍👧</span> Datos del padre / madre / tutor</div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Nombre completo</label>
+            <input type="text" name="nombre_tutor" placeholder="Nombre del tutor" required>
+          </div>
+          <div class="form-field">
+            <label>Parentesco</label>
+            <select name="parentesco" required>
+              <option value="" disabled selected>Seleccionar</option>
+              <option>Mamá</option>
+              <option>Papá</option>
+              <option>Abuelo(a)</option>
+              <option>Tío(a)</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Teléfono celular</label>
+            <input type="tel" name="telefono" placeholder="444 000 0000" required>
+          </div>
+          <div class="form-field">
+            <label>Teléfono alterno</label>
+            <input type="tel" name="telefono_alterno" placeholder="444 000 0000">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field full">
+            <label>Correo electrónico</label>
+            <input type="email" name="email" placeholder="correo@ejemplo.com" required>
+          </div>
+        </div>
+
+        <div class="form-group-title"><span>🚨</span> Contacto de emergencia</div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Nombre</label>
+            <input type="text" name="emergencia_nombre" placeholder="Nombre completo" required>
+          </div>
+          <div class="form-field">
+            <label>Parentesco</label>
+            <input type="text" name="emergencia_parentesco" placeholder="Ej. Abuela, Tío" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Teléfono</label>
+            <input type="tel" name="emergencia_telefono" placeholder="444 000 0000" required>
+          </div>
+        </div>
+
+        <div class="form-group-title"><span>🚗</span> Personas autorizadas para recoger</div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Persona 1 — Nombre y parentesco</label>
+            <input type="text" name="autorizado_1" placeholder="Ej. María López (Abuela)" required>
+          </div>
+          <div class="form-field">
+            <label>Persona 2 (opcional)</label>
+            <input type="text" name="autorizado_2" placeholder="Ej. Carlos Pérez (Tío)">
+          </div>
+        </div>
+
+        <div class="form-nav">
+          <button type="button" class="btn-back" onclick="prevStep(2)">← Anterior</button>
+          <button type="button" class="btn-next" onclick="nextStep(2)">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: CAMP + AUTH -->
+      <div class="form-panel" id="panel-3">
+        <div class="form-group-title"><span>📅</span> Datos del campamento</div>
+        <div class="form-row">
+          <div class="form-field full">
+            <label>Días a inscribir</label>
+            <select name="semana" required>
+              <option value="" disabled selected>Seleccionar</option>
+              <option value="Semana completa (6 – 10 abr)">Semana completa — 6 al 10 de abril ($1,200)</option>
+              <option value="Día suelto – Lunes 6 abr">Solo Lunes 6 de abril ($250)</option>
+              <option value="Día suelto – Martes 7 abr">Solo Martes 7 de abril ($250)</option>
+              <option value="Día suelto – Miércoles 8 abr">Solo Miércoles 8 de abril ($250)</option>
+              <option value="Día suelto – Jueves 9 abr">Solo Jueves 9 de abril ($250)</option>
+              <option value="Día suelto – Viernes 10 abr">Solo Viernes 10 de abril ($250)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field full">
+            <label>Horario</label>
+            <select name="horario" required>
+              <option value="" disabled selected>Seleccionar</option>
+              <option value="Regular (9:00 - 13:30)">Regular — 9:00 a 13:30 hrs</option>
+              <option value="Extendido (9:00 - 14:30) +$50/día">Extendido — hasta 14:30 hrs (+$50/día)</option>
+              <option value="Extendido semana completa (9:00 - 14:30) +$250">Extendido semana completa (+$250)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group-title"><span>📝</span> Autorizaciones</div>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" name="aut_imagen" required>
+            <span>Autorizo el uso de imagen (fotos y videos) de mi hijo(a) para redes sociales y material promocional de Kidiverso.</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="aut_emergencia" required>
+            <span>Autorizo que en caso de emergencia médica se brinde atención a mi hijo(a) si no logran contactarme.</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="aut_reglamento" required>
+            <span>He leído y acepto el reglamento del Campamento Kidiverso 2026.</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="aut_datos" required>
+            <span>Confirmo que los datos proporcionados son verídicos.</span>
+          </label>
+        </div>
+
+        <div class="form-nav">
+          <button type="button" class="btn-back" onclick="prevStep(3)">← Anterior</button>
+          <button type="submit" class="submit-btn">Enviar Pre-Inscripción 🎉</button>
+        </div>
+        <p class="form-note">Al enviar reservas el lugar. La inscripción se formaliza con firma presencial.<br>📍 Carretera a Guadalajara 1235, Lomas del Tecnológico, SLP</p>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contacto">
+  <h2 class="section-title">¿Tienes dudas?</h2>
+  <p class="section-subtitle">Estamos listos para ayudarte por el canal que prefieras</p>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="ci">📞</div>
+      <strong>Teléfono</strong>
+      <a href="tel:4448606759">444 860 67 59</a>
+    </div>
+    <div class="contact-card">
+      <div class="ci">💬</div>
+      <strong>WhatsApp</strong>
+      <a href="https://wa.me/524401864030" target="_blank">440 186 4030</a>
+    </div>
+    <div class="contact-card">
+      <div class="ci">✉️</div>
+      <strong>Correo</strong>
+      <a href="mailto:hola@kidiverso.mx">hola@kidiverso.mx</a>
+    </div>
+    <div class="contact-card">
+      <div class="ci">📍</div>
+      <strong>Dirección</strong>
+      <span>Carretera Gdl. 1235</span>
+      <span>Lomas del Tecnológico, SLP</span>
+    </div>
+  </div>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3694.3!2d-100.9975!3d22.1565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKidiverso!5e0!3m2!1ses!2smx!4v1"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  <p class="footer-note">© 2026 Kidiverso · Todos los derechos reservados · <a href="https://kidiverso.mx" style="color:rgba(255,255,255,0.4)">kidiverso.mx</a></p>
+</section>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/524401864030?text=Hola,%20me%20interesa%20el%20Campamento%20de%20Pascua%202026%20de%20Kidiverso" target="_blank" class="wa-float" title="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Success Overlay -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-emoji">🎉</div>
+  <h2 class="success-title">¡Pre-inscripción enviada!</h2>
+  <p class="success-msg">Recibimos los datos de tu hijo(a). Nos pondremos en contacto por WhatsApp para confirmar y agendar la firma presencial en Kidiverso.</p>
+  <br><br>
+  <a href="#inicio" class="btn-primary" onclick="document.getElementById('successOverlay').classList.remove('active')" style="color:var(--purple);">Volver al inicio</a>
+</div>
+
+<script>
+// ===== COUNTDOWN =====
+function updateCountdown() {
+  const target = new Date('2026-04-06T09:00:00-06:00');
+  const now = new Date();
+  const diff = target - now;
+
+  if (diff <= 0) {
+    document.getElementById('countdown').innerHTML = '<p class="countdown-ended">¡El campamento ya comenzó! 🎉</p>';
+    return;
+  }
+
+  const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const secs  = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById('cd-days').textContent  = String(days).padStart(2,'0');
+  document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+  document.getElementById('cd-mins').textContent  = String(mins).padStart(2,'0');
+  document.getElementById('cd-secs').textContent  = String(secs).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// ===== SMOOTH SCROLL =====
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+// ===== FAQ ACCORDION =====
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// ===== MULTI-STEP FORM =====
+let currentStep = 1;
+const totalSteps = 3;
+
+function showStep(step) {
+  for (let i = 1; i <= totalSteps; i++) {
+    const panel = document.getElementById('panel-' + i);
+    const dot   = document.getElementById('dot-' + i);
+    panel.classList.toggle('active', i === step);
+    dot.classList.remove('active', 'completed');
+    if (i === step) dot.classList.add('active');
+    if (i < step)   dot.classList.add('completed');
+  }
+  currentStep = step;
+  document.getElementById('inscripcion').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function validateStep(step) {
+  const panel = document.getElementById('panel-' + step);
+  const required = panel.querySelectorAll('[required]');
+  for (const field of required) {
+    if (!field.value.trim()) {
+      field.focus();
+      field.style.borderColor = '#e91e8c';
+      setTimeout(() => field.style.borderColor = '', 2000);
+      return false;
+    }
+  }
+  return true;
+}
+
+function nextStep(step) {
+  if (!validateStep(step)) return;
+  if (step < totalSteps) showStep(step + 1);
+}
+
+function prevStep(step) {
+  if (step > 1) showStep(step - 1);
+}
+
+// ===== GOOGLE SHEETS INTEGRATION =====
+// INSTRUCCIONES PARA CONFIGURAR:
+// 1. Crea un Google Sheet nuevo
+// 2. En la fila 1 pon estos encabezados (exactos):
+//    Timestamp | nombre_nino | fecha_nacimiento | edad | escuela | talla | genero |
+//    nombre_tutor | parentesco | telefono | telefono_alterno | email |
+//    emergencia_nombre | emergencia_parentesco | emergencia_telefono |
+//    autorizado_1 | autorizado_2 | alergias | tipo_sangre | condiciones_medicas |
+//    semana | horario | aut_imagen | aut_emergencia | aut_reglamento | aut_datos
+// 3. Ve a Extensiones > Apps Script
+// 4. Pega el código del archivo google-apps-script.gs
+// 5. Implementar > Nueva implementación > App web
+//    - Ejecutar como: Tu cuenta
+//    - Quién tiene acceso: Cualquier persona
+// 6. Copia la URL del deploy y pégala aquí abajo:
+const GOOGLE_SHEETS_URL = 'PEGA_AQUI_TU_URL_DE_APPS_SCRIPT';
+
+async function handleSubmit(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const btn  = form.querySelector('.submit-btn');
+  const orig = btn.textContent;
+
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+  btn.style.opacity = '0.7';
+
+  const data = {};
+  form.querySelectorAll('input, select, textarea').forEach(f => {
+    if (!f.name) return;
+    data[f.name] = f.type === 'checkbox' ? (f.checked ? 'Sí' : 'No') : f.value;
+  });
+  data.timestamp = new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' });
+
+  try {
+    if (GOOGLE_SHEETS_URL === 'PEGA_AQUI_TU_URL_DE_APPS_SCRIPT') {
+      console.log('MODO DEMO — Datos:', data);
+      showSuccess();
+      return;
+    }
+    await fetch(GOOGLE_SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    showSuccess();
+  } catch (err) {
+    console.error(err);
+    alert('Hubo un error al enviar. Contáctanos por WhatsApp al 440 186 4030.');
+    btn.disabled = false;
+    btn.textContent = orig;
+    btn.style.opacity = '1';
+  }
+}
+
+function showSuccess() {
+  document.getElementById('successOverlay').classList.add('active');
+  window.scrollTo(0, 0);
+  document.getElementById('registrationForm').reset();
+  showStep(1);
+}
+</script>
+
+</body>
+</html>
