@@ -1291,7 +1291,7 @@ function prevStep(step) {
 //    - Ejecutar como: Tu cuenta
 //    - Quién tiene acceso: Cualquier persona
 // 6. Copia la URL del deploy y pégala aquí abajo:
-const GOOGLE_SHEETS_URL = 'PEGA_AQUI_TU_URL_DE_APPS_SCRIPT';
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbx35GBr9bHTfo2qsJI3pUeklsd88T2AW7kmQy4ScxG0o5zobDDZQvuyfLSAZAnTkrfW4g/exec';
 
 async function handleSubmit(e) {
   e.preventDefault();
@@ -1312,11 +1312,6 @@ async function handleSubmit(e) {
   data.timestamp = new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' });
 
   try {
-    if (GOOGLE_SHEETS_URL === 'PEGA_AQUI_TU_URL_DE_APPS_SCRIPT') {
-      console.log('MODO DEMO — Datos:', data);
-      showSuccess();
-      return;
-    }
     await fetch(GOOGLE_SHEETS_URL, {
       method: 'POST',
       mode: 'no-cors',
