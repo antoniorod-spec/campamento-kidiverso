@@ -852,23 +852,45 @@ section { padding: 4rem 1.5rem; }
 <section class="pricing-section" id="precios">
   <h2 class="section-title">Inversión</h2>
   <p class="section-subtitle">Elige la opción que mejor se adapte a tus planes de Pascua</p>
-  <div class="pricing-grid">
+  <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
     <div class="price-card featured">
       <div class="price-badge">⭐ Más popular</div>
       <div class="price-icon">📅</div>
-      <h3>Semana completa</h3>
+      <h3>5 días</h3>
       <div class="price-amount"><span class="peso">$</span>1,200</div>
-      <p class="price-desc">Lunes a Viernes<br>Horario regular (9:00 – 13:30)</p>
-      <div class="price-ext">+ Horario extendido: <strong>+$250</strong><br><small>hasta 14:30 hrs toda la semana</small></div>
+      <p class="price-desc">Semana completa<br>Lunes a Viernes</p>
+      <div class="price-ext">+ Extendido: <strong>+$250</strong></div>
     </div>
     <div class="price-card">
-      <div class="price-icon">🗓️</div>
-      <h3>Día suelto</h3>
+      <div class="price-icon">4️⃣</div>
+      <h3>4 días</h3>
+      <div class="price-amount"><span class="peso">$</span>1,000</div>
+      <p class="price-desc">A elegir entre<br>los días del camp</p>
+      <div class="price-ext">+ Extendido: <strong>+$200</strong></div>
+    </div>
+    <div class="price-card">
+      <div class="price-icon">3️⃣</div>
+      <h3>3 días</h3>
+      <div class="price-amount"><span class="peso">$</span>750</div>
+      <p class="price-desc">A elegir entre<br>los días del camp</p>
+      <div class="price-ext">+ Extendido: <strong>+$150</strong></div>
+    </div>
+    <div class="price-card">
+      <div class="price-icon">2️⃣</div>
+      <h3>2 días</h3>
+      <div class="price-amount"><span class="peso">$</span>500</div>
+      <p class="price-desc">A elegir entre<br>los días del camp</p>
+      <div class="price-ext">+ Extendido: <strong>+$100</strong></div>
+    </div>
+    <div class="price-card">
+      <div class="price-icon">1️⃣</div>
+      <h3>1 día</h3>
       <div class="price-amount"><span class="peso">$</span>250</div>
-      <p class="price-desc">Por día individual<br>Horario regular (9:00 – 13:30)</p>
-      <div class="price-ext">+ Horario extendido: <strong>+$50</strong><br><small>hasta 14:30 hrs ese día</small></div>
+      <p class="price-desc">El día que<br>más te convenga</p>
+      <div class="price-ext">+ Extendido: <strong>+$50</strong></div>
     </div>
   </div>
+  <p style="text-align:center; margin-top:1.2rem; font-size:0.82rem; color:var(--gray-text);">Horario regular: 9:00 – 13:30 hrs · Extendido hasta 14:30 hrs</p>
 </section>
 
 <!-- FAQ -->
@@ -1066,12 +1088,11 @@ section { padding: 4rem 1.5rem; }
             <label>Días a inscribir</label>
             <select name="semana" required>
               <option value="" disabled selected>Seleccionar</option>
-              <option value="Semana completa (6 – 10 abr)">Semana completa — 6 al 10 de abril ($1,200)</option>
-              <option value="Día suelto – Lunes 6 abr">Solo Lunes 6 de abril ($250)</option>
-              <option value="Día suelto – Martes 7 abr">Solo Martes 7 de abril ($250)</option>
-              <option value="Día suelto – Miércoles 8 abr">Solo Miércoles 8 de abril ($250)</option>
-              <option value="Día suelto – Jueves 9 abr">Solo Jueves 9 de abril ($250)</option>
-              <option value="Día suelto – Viernes 10 abr">Solo Viernes 10 de abril ($250)</option>
+              <option value="Semana completa (6 – 10 abr)">Semana completa — Lunes a Viernes ($1,200)</option>
+              <option value="4 días (6 – 10 abr)">4 días ($1,000)</option>
+              <option value="3 días (6 – 10 abr)">3 días ($750)</option>
+              <option value="2 días (6 – 10 abr)">2 días ($500)</option>
+              <option value="1 día (6 – 10 abr)">1 día ($250)</option>
             </select>
           </div>
         </div>
