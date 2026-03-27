@@ -894,7 +894,7 @@ section { padding: 4rem 1.5rem; }
   <div class="hero-dates">
     <span class="hero-date-chip">📅 6 al 10 de abril</span>
     <span class="hero-date-chip">🕘 9:00 a 13:30 hrs</span>
-    <span class="hero-date-chip">🧒 3 a 12 años</span>
+    <span class="hero-date-chip">🧒 3 a 10 años</span>
   </div>
   <div class="hero-btns">
     <a href="#inscripcion" class="btn-primary">¡Quiero inscribirme!</a>
@@ -919,7 +919,7 @@ section { padding: 4rem 1.5rem; }
 <!-- ACTIVITIES -->
 <section class="activities-section" id="incluye">
   <h2 class="section-title">¿Qué hacemos en el campamento?</h2>
-  <p class="section-subtitle">Una semana llena de actividades súper divertidas y creativas para niños de 3 a 12 años</p>
+  <p class="section-subtitle">Una semana llena de actividades súper divertidas y creativas para niños de 3 a 10 años</p>
   <div class="activities-grid">
     <div class="activity-card">
       <span class="activity-icon">👩‍🍳</span>
@@ -950,7 +950,7 @@ section { padding: 4rem 1.5rem; }
   <div class="schedule-item"><div class="s-label">Días</div><div class="s-val">Lunes a Viernes</div></div>
   <div class="schedule-item"><div class="s-label">Horario regular</div><div class="s-val">9:00 – 13:30 hrs</div></div>
   <div class="schedule-item"><div class="s-label">Horario extendido</div><div class="s-val">Hasta 14:30 hrs</div></div>
-  <div class="schedule-item"><div class="s-label">Edades</div><div class="s-val">3 a 12 años</div></div>
+  <div class="schedule-item"><div class="s-label">Edades</div><div class="s-val">3 a 10 años</div></div>
 </div>
 
 <!-- PRICING -->
@@ -1114,12 +1114,18 @@ section { padding: 4rem 1.5rem; }
         </div>
         <div class="form-row">
           <div class="form-field">
-            <label>Fecha de nacimiento</label>
-            <input type="date" name="fecha_nacimiento" required>
-          </div>
-          <div class="form-field">
             <label>Edad</label>
-            <input type="number" name="edad" min="3" max="12" placeholder="3 – 12" required>
+            <select name="edad" required>
+              <option value="" disabled selected>Seleccionar</option>
+              <option>3 años</option>
+              <option>4 años</option>
+              <option>5 años</option>
+              <option>6 años</option>
+              <option>7 años</option>
+              <option>8 años</option>
+              <option>9 años</option>
+              <option>10 años</option>
+            </select>
           </div>
         </div>
         <div class="form-row">
