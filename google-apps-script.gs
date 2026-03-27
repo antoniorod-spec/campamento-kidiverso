@@ -60,7 +60,7 @@ function doPost(e) {
 
         // Header morado
         '<tr><td style="background:linear-gradient(135deg,#341c77 0%,#7c3aed 100%);padding:36px 32px;text-align:center;">' +
-        '<div style="font-size:48px;margin-bottom:8px;">🎪</div>' +
+        '<img src="https://camping.kidiverso.mx/logo-kidiverso-sin-fondo.png" alt="Kidiverso" style="width:180px;max-width:80%;height:auto;margin-bottom:12px;display:block;margin-left:auto;margin-right:auto;" />' +
         '<h1 style="margin:0;color:#ffffff;font-size:26px;font-weight:800;line-height:1.2;">¡Pre-inscripción recibida!</h1>' +
         '<p style="margin:8px 0 0;color:rgba(255,255,255,0.8);font-size:15px;">Campamento de Pascua Kidiverso 2026</p>' +
         '</td></tr>' +
