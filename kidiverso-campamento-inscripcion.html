@@ -730,6 +730,111 @@ section { padding: 4rem 1.5rem; }
   50% { box-shadow: 0 6px 35px rgba(37,211,102,0.7), 0 0 0 10px rgba(37,211,102,0.1); }
 }
 
+/* ===== MODAL REGLAMENTO ===== */
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(20,8,51,0.7);
+  z-index: 150;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+}
+.modal-backdrop.open { display: flex; }
+.modal-box {
+  background: white;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 660px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+.modal-header {
+  background: var(--purple);
+  padding: 1.2rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.modal-header h2 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+}
+.modal-close {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(255,255,255,0.3); }
+.modal-body {
+  overflow-y: auto;
+  padding: 1.6rem;
+  flex: 1;
+  font-size: 0.88rem;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+.modal-body h3 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.95rem;
+  color: var(--purple);
+  margin: 1.4rem 0 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--purple-pale);
+}
+.modal-body h3:first-child { margin-top: 0; }
+.modal-body ol { padding-left: 1.2rem; }
+.modal-body ol li { margin-bottom: 0.4rem; }
+.modal-footer {
+  padding: 1rem 1.6rem;
+  border-top: 2px solid var(--gray-light);
+  display: flex;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+.btn-accept {
+  flex: 1;
+  padding: 0.8rem;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, var(--green) 0%, #3aab49 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(97,206,112,0.35);
+  transition: all 0.2s ease;
+}
+.btn-accept:hover { transform: translateY(-2px); }
+.btn-close-reg {
+  padding: 0.8rem 1.4rem;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-text);
+  background: var(--gray-bg);
+  border: 2px solid var(--gray-light);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-close-reg:hover { border-color: var(--purple-light); }
+
 /* ===== SUCCESS ===== */
 .success-overlay {
   display: none;
@@ -852,45 +957,89 @@ section { padding: 4rem 1.5rem; }
 <section class="pricing-section" id="precios">
   <h2 class="section-title">Inversión</h2>
   <p class="section-subtitle">Elige la opción que mejor se adapte a tus planes de Pascua</p>
-  <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
-    <div class="price-card featured">
-      <div class="price-badge">⭐ Más popular</div>
-      <div class="price-icon">📅</div>
-      <h3>5 días</h3>
-      <div class="price-amount"><span class="peso">$</span>1,200</div>
-      <p class="price-desc">Semana completa<br>Lunes a Viernes</p>
-      <div class="price-ext">+ Extendido: <strong>+$250</strong></div>
+
+  <div style="max-width:780px; margin:0 auto;">
+
+    <!-- HERO: Semana completa -->
+    <div style="
+      background: linear-gradient(135deg, var(--purple) 0%, #7c3aed 100%);
+      border-radius: 24px;
+      padding: 2.2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 10px 40px rgba(52,28,119,0.25);
+      position: relative;
+      overflow: hidden;
+    ">
+      <!-- decorative blob -->
+      <div style="position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:rgba(255,255,255,0.06);border-radius:50%;"></div>
+      <div style="position:absolute;bottom:-30px;left:30%;width:120px;height:120px;background:rgba(255,255,255,0.04);border-radius:50%;"></div>
+
+      <div style="position:relative;z-index:1;">
+        <div style="display:inline-block;background:var(--orange);color:var(--purple);font-family:'Fredoka',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:0.25rem 0.9rem;border-radius:50px;margin-bottom:0.7rem;">⭐ Opción recomendada</div>
+        <div style="font-family:'Fredoka',sans-serif;font-size:1.6rem;font-weight:700;color:white;line-height:1.1;">Semana Completa</div>
+        <div style="color:rgba(255,255,255,0.7);font-size:0.9rem;margin-top:0.3rem;">Lunes a Viernes · 6 al 10 de abril · 5 días</div>
+      </div>
+
+      <div style="position:relative;z-index:1;text-align:right;">
+        <div style="font-family:'Fredoka',sans-serif;font-size:3.8rem;font-weight:700;color:white;line-height:1;">
+          <span style="font-size:2rem;">$</span>1,200
+        </div>
+        <div style="color:rgba(255,255,255,0.6);font-size:0.8rem;margin-top:0.2rem;">Horario regular 9:00 – 13:30</div>
+        <div style="background:rgba(255,255,255,0.15);border-radius:8px;padding:0.35rem 0.8rem;display:inline-block;margin-top:0.5rem;color:white;font-size:0.82rem;font-weight:700;">+ Extendido hasta 14:30: <span style="color:var(--orange);">+$250</span></div>
+      </div>
+
+      <div style="width:100%;position:relative;z-index:1;">
+        <a href="#inscripcion" style="display:inline-block;background:white;color:var(--purple);font-family:'Fredoka',sans-serif;font-size:1.05rem;font-weight:700;padding:0.7rem 2rem;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,0.15);transition:all 0.2s ease;">Inscribir semana completa →</a>
+      </div>
     </div>
-    <div class="price-card">
-      <div class="price-icon">4️⃣</div>
-      <h3>4 días</h3>
-      <div class="price-amount"><span class="peso">$</span>1,000</div>
-      <p class="price-desc">A elegir entre<br>los días del camp</p>
-      <div class="price-ext">+ Extendido: <strong>+$200</strong></div>
+
+    <!-- DIAS SUELTOS -->
+    <div style="
+      background: white;
+      border: 2px solid var(--gray-light);
+      border-radius: 20px;
+      padding: 1.4rem 1.6rem;
+      box-shadow: 0 2px 12px rgba(52,28,119,0.05);
+    ">
+      <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1.1rem;">
+        <span style="font-size:1.1rem;">🗓️</span>
+        <span style="font-family:'Fredoka',sans-serif;font-size:1.05rem;color:var(--purple);font-weight:700;">¿No puedes la semana completa? También hay días sueltos</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.8rem;">
+        <div style="text-align:center;padding:0.9rem 0.5rem;border:2px solid var(--purple-pale);border-radius:14px;background:var(--gray-bg);">
+          <div style="font-size:1.3rem;margin-bottom:0.2rem;">1️⃣</div>
+          <div style="font-family:'Fredoka',sans-serif;font-size:1rem;color:var(--purple);font-weight:700;">1 día</div>
+          <div style="font-family:'Fredoka',sans-serif;font-size:1.4rem;color:var(--purple);font-weight:700;">$250</div>
+          <div style="font-size:0.7rem;color:var(--gray-text);">+$50 extendido</div>
+        </div>
+        <div style="text-align:center;padding:0.9rem 0.5rem;border:2px solid var(--purple-pale);border-radius:14px;background:var(--gray-bg);">
+          <div style="font-size:1.3rem;margin-bottom:0.2rem;">2️⃣</div>
+          <div style="font-family:'Fredoka',sans-serif;font-size:1rem;color:var(--purple);font-weight:700;">2 días</div>
+          <div style="font-family:'Fredoka',sans-serif;font-size:1.4rem;color:var(--purple);font-weight:700;">$500</div>
+          <div style="font-size:0.7rem;color:var(--gray-text);">+$100 extendido</div>
+        </div>
+        <div style="text-align:center;padding:0.9rem 0.5rem;border:2px solid var(--purple-pale);border-radius:14px;background:var(--gray-bg);">
+          <div style="font-size:1.3rem;margin-bottom:0.2rem;">3️⃣</div>
+          <div style="font-family:'Fredoka',sans-serif;font-size:1rem;color:var(--purple);font-weight:700;">3 días</div>
+          <div style="font-family:'Fredoka',sans-serif;font-size:1.4rem;color:var(--purple);font-weight:700;">$750</div>
+          <div style="font-size:0.7rem;color:var(--gray-text);">+$150 extendido</div>
+        </div>
+        <div style="text-align:center;padding:0.9rem 0.5rem;border:2px solid var(--purple-pale);border-radius:14px;background:var(--gray-bg);">
+          <div style="font-size:1.3rem;margin-bottom:0.2rem;">4️⃣</div>
+          <div style="font-family:'Fredoka',sans-serif;font-size:1rem;color:var(--purple);font-weight:700;">4 días</div>
+          <div style="font-family:'Fredoka',sans-serif;font-size:1.4rem;color:var(--purple);font-weight:700;">$1,000</div>
+          <div style="font-size:0.7rem;color:var(--gray-text);">+$200 extendido</div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:0.9rem;font-size:0.8rem;color:var(--gray-text);">$250 por día · Horario regular 9:00 – 13:30 hrs</p>
     </div>
-    <div class="price-card">
-      <div class="price-icon">3️⃣</div>
-      <h3>3 días</h3>
-      <div class="price-amount"><span class="peso">$</span>750</div>
-      <p class="price-desc">A elegir entre<br>los días del camp</p>
-      <div class="price-ext">+ Extendido: <strong>+$150</strong></div>
-    </div>
-    <div class="price-card">
-      <div class="price-icon">2️⃣</div>
-      <h3>2 días</h3>
-      <div class="price-amount"><span class="peso">$</span>500</div>
-      <p class="price-desc">A elegir entre<br>los días del camp</p>
-      <div class="price-ext">+ Extendido: <strong>+$100</strong></div>
-    </div>
-    <div class="price-card">
-      <div class="price-icon">1️⃣</div>
-      <h3>1 día</h3>
-      <div class="price-amount"><span class="peso">$</span>250</div>
-      <p class="price-desc">El día que<br>más te convenga</p>
-      <div class="price-ext">+ Extendido: <strong>+$50</strong></div>
-    </div>
+
   </div>
-  <p style="text-align:center; margin-top:1.2rem; font-size:0.82rem; color:var(--gray-text);">Horario regular: 9:00 – 13:30 hrs · Extendido hasta 14:30 hrs</p>
 </section>
 
 <!-- FAQ -->
@@ -1119,8 +1268,8 @@ section { padding: 4rem 1.5rem; }
             <span>Autorizo que en caso de emergencia médica se brinde atención a mi hijo(a) si no logran contactarme.</span>
           </label>
           <label class="checkbox-item">
-            <input type="checkbox" name="aut_reglamento" required>
-            <span>He leído y acepto el reglamento del Campamento Kidiverso 2026.</span>
+            <input type="checkbox" name="aut_reglamento" id="chk_reglamento" required>
+            <span>He leído y acepto el <button type="button" onclick="openReglamento()" style="background:none;border:none;color:var(--purple);font-weight:800;cursor:pointer;text-decoration:underline;font-family:inherit;font-size:inherit;padding:0;">reglamento del Campamento Kidiverso 2026</button>.</span>
           </label>
           <label class="checkbox-item">
             <input type="checkbox" name="aut_datos" required>
@@ -1179,6 +1328,119 @@ section { padding: 4rem 1.5rem; }
 <a href="https://wa.me/524401864030?text=Hola,%20me%20interesa%20el%20Campamento%20de%20Pascua%202026%20de%20Kidiverso" target="_blank" class="wa-float" title="Escríbenos por WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
+
+<!-- Modal Reglamento -->
+<div class="modal-backdrop" id="modalReglamento">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>📋 Reglamento — Campamento de Pascua Kidiverso 2026</h2>
+      <button class="modal-close" onclick="closeReglamento()">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <h3>1. Horarios de entrada y salida</h3>
+      <ol>
+        <li>El campamento opera de lunes a viernes del 6 al 10 de abril de 2026.</li>
+        <li>Horario regular: 9:00 a 13:30 hrs. Horario extendido (con costo adicional): hasta las 14:30 hrs.</li>
+        <li>La entrada es a partir de las 8:50 hrs. No se recibirán niños antes de ese horario.</li>
+        <li>Pasados 15 minutos del horario de salida sin que el niño sea recogido, se contactará al tutor de inmediato.</li>
+      </ol>
+
+      <h3>2. Puntualidad</h3>
+      <ol>
+        <li>Hay una tolerancia de 15 minutos a la entrada (hasta las 9:15 hrs). Después no se garantiza acceso a todas las actividades del día.</li>
+        <li>Si llegará tarde o recogerá antes, avise con anticipación al personal del campamento.</li>
+      </ol>
+
+      <h3>3. Qué debe traer el niño</h3>
+      <ol>
+        <li>Ropa cómoda y deportiva, adecuada para actividades físicas y manuales. Se recomienda traer un cambio de ropa extra.</li>
+        <li>Tenis o zapato cerrado. No se permiten sandalias ni chanclas por seguridad.</li>
+        <li>Su lunch en lonchera para la hora del refrigerio. El lunch se puede calentar en las instalaciones.</li>
+        <li>Se recomienda traer termo personal para rellenar agua durante el día. El campamento incluye agua.</li>
+        <li>Bloqueador solar aplicado desde casa. Opcional traer el frasco etiquetado con su nombre.</li>
+        <li>Todos los artículos personales deben venir marcados con el nombre completo del niño.</li>
+      </ol>
+
+      <h3>4. Qué NO debe traer</h3>
+      <ol>
+        <li>Juguetes, figuras o artículos de valor. Kidiverso no se responsabiliza por pérdidas o daños.</li>
+        <li>Dinero en efectivo. Las actividades del campamento están incluidas en la inscripción.</li>
+        <li>Dispositivos electrónicos: celulares, tablets, consolas o audífonos.</li>
+        <li>Alimentos con nueces, cacahuates o mariscos sin avisar previamente, por posibles alergias en el grupo.</li>
+        <li>Armas de juguete o cualquier objeto que pueda representar un riesgo para otros.</li>
+      </ol>
+
+      <h3>5. Alimentación</h3>
+      <ol>
+        <li>El campamento <strong>no incluye alimentos</strong>. Cada niño debe traer su lunch en lonchera.</li>
+        <li>El lunch se puede calentar en las instalaciones. El refrigerio se consume aproximadamente a las 11:00 hrs.</li>
+        <li>El campamento <strong>sí incluye agua</strong>. Se recomienda traer termo personal para rellenar durante el día.</li>
+        <li>Las bebidas adicionales deben venir en envase cerrado y etiquetado. No se permiten bebidas energéticas.</li>
+        <li>Si su hijo requiere dieta especial, indíquelo en el formulario o notifique al personal con anticipación.</li>
+      </ol>
+
+      <h3>6. Comportamiento y convivencia</h3>
+      <ol>
+        <li>Se espera respeto hacia compañeros, monitores y las instalaciones en todo momento.</li>
+        <li>No se tolerará agresión física o verbal, burlas ni discriminación de ningún tipo.</li>
+        <li>Los niños deben seguir las indicaciones del personal, especialmente durante actividades físicas.</li>
+        <li>El daño intencional al material o instalaciones podrá implicar la reposición por parte de los tutores.</li>
+      </ol>
+
+      <h3>7. Seguridad y salud</h3>
+      <ol>
+        <li>Es obligatorio declarar en la inscripción cualquier alergia, condición médica o restricción física.</li>
+        <li>Si el niño requiere medicamento, entregarlo al personal en envase original etiquetado con nombre, dosis y horario.</li>
+        <li>En caso de fiebre, vómito, diarrea o síntomas contagiosos, el niño no podrá asistir hasta recuperarse.</li>
+        <li>El campamento cuenta con botiquín de primeros auxilios y personal capacitado para atenciones básicas.</li>
+      </ol>
+
+      <h3>8. Personas autorizadas para recoger</h3>
+      <ol>
+        <li>Solo podrán recoger al niño las personas registradas en el formulario de inscripción.</li>
+        <li>Si una persona no registrada necesita recoger al menor, el tutor debe notificarlo con anticipación.</li>
+        <li>El personal podrá solicitar identificación oficial a cualquier persona que acuda por un niño.</li>
+      </ol>
+
+      <h3>9. Uso de imagen</h3>
+      <ol>
+        <li>Durante el campamento se tomarán fotos y videos para redes sociales y material de Kidiverso.</li>
+        <li>Al inscribirse, los tutores otorgan su consentimiento para el uso de imagen.</li>
+        <li>Si no desea que su hijo aparezca en contenido público, indíquelo expresamente en el formulario.</li>
+      </ol>
+
+      <h3>10. Responsabilidades del tutor</h3>
+      <ol>
+        <li>Proporcionar información veraz y completa: alergias, enfermedades, contactos y personas autorizadas.</li>
+        <li>Asegurarse de que el niño llegue en condiciones de salud adecuadas para participar.</li>
+        <li>Estar localizable en todo momento durante el horario del campamento.</li>
+        <li>Notificar cualquier cambio en la información registrada con la debida anticipación.</li>
+      </ol>
+
+      <h3>11. Emergencias</h3>
+      <ol>
+        <li>Ante accidente o malestar, el personal brindará primeros auxilios e informará de inmediato a los tutores.</li>
+        <li>Si la situación lo requiere, se contactará a servicios de emergencia y se trasladará al menor al centro médico más cercano.</li>
+        <li>Los tutores son responsables de los gastos médicos que requiera su hijo.</li>
+      </ol>
+
+      <h3>12. Causas de baja del campamento</h3>
+      <ol>
+        <li>Conducta agresiva o peligrosa reiterada que afecte al grupo, tras aviso previo a los padres.</li>
+        <li>Presentar síntomas de enfermedad contagiosa durante el campamento.</li>
+        <li>Incumplimiento grave o reiterado del reglamento por parte del niño o los tutores.</li>
+      </ol>
+
+      <p style="margin-top:1.4rem; text-align:center; font-weight:700; color:var(--purple);">¡Bienvenidos al Campamento de Pascua Kidiverso 2026! 🐣</p>
+
+    </div>
+    <div class="modal-footer">
+      <button class="btn-close-reg" onclick="closeReglamento()">Cerrar</button>
+      <button class="btn-accept" onclick="acceptReglamento()">✓ He leído y acepto el reglamento</button>
+    </div>
+  </div>
+</div>
 
 <!-- Success Overlay -->
 <div class="success-overlay" id="successOverlay">
@@ -1323,6 +1585,24 @@ async function handleSubmit(e) {
     btn.style.opacity = '1';
   }
 }
+
+// ===== MODAL REGLAMENTO =====
+function openReglamento() {
+  document.getElementById('modalReglamento').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeReglamento() {
+  document.getElementById('modalReglamento').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function acceptReglamento() {
+  document.getElementById('chk_reglamento').checked = true;
+  closeReglamento();
+}
+// Cerrar al hacer click fuera del modal
+document.getElementById('modalReglamento').addEventListener('click', function(e) {
+  if (e.target === this) closeReglamento();
+});
 
 function showSuccess() {
   document.getElementById('successOverlay').classList.add('active');
