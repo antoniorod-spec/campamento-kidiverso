@@ -41,7 +41,8 @@ function doPost(e) {
       data.aut_imagen            || '',
       data.aut_emergencia        || '',
       data.aut_reglamento        || '',
-      data.aut_datos             || ''
+      data.aut_datos             || '',
+      data.observaciones         || ''
     ]);
 
     // ── Correo HTML al papá/mamá ──────────────────────────────────────
@@ -137,7 +138,8 @@ function doPost(e) {
       'Días:       ' + (data.semana       || '') + '\n' +
       'Horario:    ' + (data.horario      || '') + '\n' +
       'Alergias:   ' + (data.alergias     || 'Ninguna') + '\n' +
-      'Médico:     ' + (data.condiciones_medicas || 'Ninguno') + '\n\n' +
+      'Médico:     ' + (data.condiciones_medicas || 'Ninguno') + '\n' +
+      'Observaciones: ' + (data.observaciones   || '—') + '\n\n' +
       'Ver todas las inscripciones en Google Sheets.';
 
     MailApp.sendEmail({
