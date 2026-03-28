@@ -47,9 +47,9 @@ function doPost(e) {
 
     // ── Correo HTML al papá/mamá ──────────────────────────────────────
     if (data.email) {
-      var horarioTexto = data.horario === 'extendido'
-        ? '9:00 – 14:30 hrs <span style="color:#888;font-size:13px;">(horario extendido)</span>'
-        : '9:00 – 13:30 hrs <span style="color:#888;font-size:13px;">(horario regular)</span>';
+      var horarioTexto = (data.horario || '').toLowerCase().indexOf('extendido') !== -1
+        ? '8:30 – 15:00 hrs <span style="color:#888;font-size:13px;">(horario extendido)</span>'
+        : '9:00 – 14:00 hrs <span style="color:#888;font-size:13px;">(horario regular)</span>';
 
       var htmlCliente =
         '<!DOCTYPE html><html><head><meta charset="UTF-8"></head><body style="margin:0;padding:0;background:#f0ebff;font-family:Arial,sans-serif;">' +
